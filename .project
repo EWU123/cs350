@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>cs350-project-v01.jar</name>
+			<type>1</type>
+			<location>C:/Users/elimt/OneDrive/College Documents/School Docs/cscd/cscdJARs/cs350-project-v01.jar</location>
+		</link>
+	</linkedResources>
 </projectDescription>

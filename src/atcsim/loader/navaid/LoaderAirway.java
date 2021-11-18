@@ -8,7 +8,7 @@ public class LoaderAirway {
 		
 	}
 	
-	public void load​(java.util.Scanner scanner) throws java.io.IOException {
+	public void load(java.util.Scanner scanner) throws java.io.IOException {
 		
 	}
 }
