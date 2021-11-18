@@ -4,7 +4,7 @@ import atcsim.graphics.view.navigation.OverlayNavigation;
 import atcsim.world.navigation.A_ComponentNavaid;
 
 public class LoaderVOR {
-	public LoaderVOR(A_ComponentNavaid navaids, OverlayNavigation overlay) {
+	public LoaderVOR(A_ComponentNavaid<?> navaids, OverlayNavigation overlay) {
 		
 	}
 	
