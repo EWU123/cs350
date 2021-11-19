@@ -1,5 +1,6 @@
 package atcsim.loader.navaid;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import atcsim.graphics.view.navigation.OverlayNavigation;
@@ -17,6 +18,9 @@ public class LoaderFix extends A_Loader{
 	}
 
 	public void load(java.util.Scanner scanner) throws java.io.IOException {
-		
+		String line = scanner.nextLine();
+		String[] values;
+		values = line.split(", ");
+
 	}
 }
