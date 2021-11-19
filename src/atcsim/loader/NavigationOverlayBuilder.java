@@ -16,7 +16,7 @@ public class NavigationOverlayBuilder {
 		
 		OverlayNavigation overlay = new OverlayNavigation("overlay");
 		
-		overlay.addNavaid(new LoaderFix(null, overlay));
+		overlay.addNavaid(new LoaderFix(null, overlay)); 
 		return overlay;
 		
 		
