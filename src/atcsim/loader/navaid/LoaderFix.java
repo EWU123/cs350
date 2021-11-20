@@ -26,9 +26,7 @@ public class LoaderFix extends A_Loader{
 		String[] lat = fields[1].split(",");
 		String[] lon = fields[2].split(",");
 		
-		new CoordinateWorld3D(	new Latitude(Integer.valueOf(lat[0]), Integer.valueOf(lat[1]), Double.valueOf(lat[2])), 
-								new Longitude(Integer.valueOf(lon[0]), Integer.valueOf(lon[1]), Double.valueOf(lon[2])),
-								new Altitude(Double.valueOf(fields[3])));
-		
+		CoordinateWorld3D coor3D = pars3D(lat, lon, fields[3]);	
 	}
+
 }
