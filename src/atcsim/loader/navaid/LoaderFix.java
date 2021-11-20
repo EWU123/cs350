@@ -1,5 +1,6 @@
 package atcsim.loader.navaid;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 import atcsim.datatype.Altitude;
@@ -22,6 +23,7 @@ public class LoaderFix extends A_Loader{
 
 	public void load(java.util.Scanner scanner) throws java.io.IOException {
 		String line = scanner.nextLine();
+
 		String[] fields = line.split(", ");
 		String[] lat = fields[1].split(",");
 		String[] lon = fields[2].split(",");
