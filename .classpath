@@ -7,6 +7,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/Users/justin/Downloads/cs350-project-v01.jar"/>
-	<classpathentry kind="lib" path="cs350-project-v01.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
