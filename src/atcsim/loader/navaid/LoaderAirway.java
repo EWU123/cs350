@@ -19,20 +19,22 @@ public class LoaderAirway extends A_Loader{
 		CoordinateWorld3D coor3D0 = null;
 		CoordinateWorld3D coor3D1 = null;
 		switch (fields[1]) {
-		case "NN": 	coor3D1 = NavaidManager.getInstance().getNavaid(fields[3]).getPosition();
+		case "CC":	String[] lat0 = fields[2].split(",");
+					String[] lon0 = fields[3].split(",");
+					coor3D0 = pars3D(lat0, lon0, fields[4]);
+					String[] lat1 = fields[5].split(",");
+					String[] lon1 = fields[6].split(",");
+					coor3D1 = pars3D(lat1, lon1, fields[7]);
+					break;
 		case "NC": 	coor3D0 = NavaidManager.getInstance().getNavaid(fields[2]).getPosition();
-		default:	break;
-		}
-		if(coor3D0 == null) {
-			String[] lat0 = fields[2].split(",");
-			String[] lon0 = fields[3].split(",");
-			coor3D0 = pars3D(lat0, lon0, fields[4]);	
-		}
-			
-		if(coor3D1 == null) {
-			String[] lat1 = fields[5].split(",");
-			String[] lon1 = fields[6].split(",");
-			coor3D1 = pars3D(lat1, lon1, fields[7]);
+					String[] lat2 = fields[3].split(",");
+					String[] lon2 = fields[4].split(",");
+					coor3D1 = pars3D(lat2, lon2, fields[5]);
+					break;
+		case "NN": 	coor3D0 = NavaidManager.getInstance().getNavaid(fields[2]).getPosition();
+					coor3D1 = NavaidManager.getInstance().getNavaid(fields[3]).getPosition();
+					break;
+		default:	break; //maybe should throw an error
 		}
 	}
 }
