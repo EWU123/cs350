@@ -24,7 +24,7 @@ public class NavigationOverlayBuilder {
 		Map<String, A_ComponentNavaid<?>> navaids = null;
 		OverlayNavigation overlay = new OverlayNavigation("overlay");
 		
-		System.out.println(input.nextLine());
+		input.nextLine();
 
 		LoaderFix fix = new LoaderFix(navaids,overlay);
 		fix.load(input);
@@ -41,17 +41,16 @@ public class NavigationOverlayBuilder {
 		LoaderILS ils = new LoaderILS(navaids, overlay);
 		ils.load(input);
 		
-		nextCatagory(input);
-		LoaderAirway airway = new LoaderAirway(navaids, overlay);
-		airway.load(input);
+//		nextCatagory(input);
+//		LoaderAirway airway = new LoaderAirway(navaids, overlay);
+//		airway.load(input);
 
-
+		
 		return overlay;
 	}
 	
 	private void nextCatagory(Scanner input) {
-		System.out.println(input.nextLine());
-		System.out.println(input.nextLine());
+		input.nextLine();
 	}
 	
 	//testing
