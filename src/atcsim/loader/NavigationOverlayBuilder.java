@@ -41,9 +41,9 @@ public class NavigationOverlayBuilder {
 		LoaderILS ils = new LoaderILS(navaids, overlay);
 		ils.load(input);
 		
-//		nextCatagory(input);
-//		LoaderAirway airway = new LoaderAirway(navaids, overlay);
-//		airway.load(input);
+		nextCatagory(input);
+		LoaderAirway airway = new LoaderAirway(navaids, overlay);
+		airway.load(input);
 
 		
 		return overlay;

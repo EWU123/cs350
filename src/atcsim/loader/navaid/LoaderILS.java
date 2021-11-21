@@ -18,7 +18,6 @@ public class LoaderILS extends A_Loader{
 	
 	public void load(java.util.Scanner scanner) throws java.io.IOException {
 		String line = scanner.nextLine();
-		System.out.println(line);
 		while(line.isBlank() == false)  { 
 			String[] fields = line.split(", ");
 			String id = fields[0];
