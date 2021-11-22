@@ -1,6 +1,7 @@
 package atcsim.loader;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -21,7 +22,7 @@ public class NavigationOverlayBuilder {
 	public OverlayNavigation loadDefinition(java.lang.String filespec) throws java.io.IOException {
 		File fin = new File(filespec);
 		Scanner input = new Scanner(fin);
-		Map<String, A_ComponentNavaid<?>> navaids = null;
+		HashMap<String, A_ComponentNavaid<?>> navaids = new HashMap<String, A_ComponentNavaid<?>>();
 		OverlayNavigation overlay = new OverlayNavigation("overlay");
 		
 		input.nextLine();
@@ -44,7 +45,6 @@ public class NavigationOverlayBuilder {
 		nextCatagory(input);
 		LoaderAirway airway = new LoaderAirway(navaids, overlay);
 		airway.load(input);
-
 		
 		return overlay;
 	}

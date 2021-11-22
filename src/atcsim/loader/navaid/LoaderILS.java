@@ -36,6 +36,7 @@ public class LoaderILS extends A_Loader{
 			ComponentNavaidILS ils = new ComponentNavaidILS(id, coor3D, angle, vhf, outer, middle, inner);
 			
 			overlay.addNavaid(ils);
+			navaids.put(id, ils);
 			
 			line = scanner.nextLine();
 		}

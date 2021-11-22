@@ -32,8 +32,8 @@ public class LoaderFix extends A_Loader{
 			CoordinateWorld3D coor3D = pars3D(lat, lon, fields[3]);	
 			ComponentNavaidFix fix = new ComponentNavaidFix(id, coor3D);
 			
-			//navaids.put(id, fix); //this is causing a null pointer error
 			overlay.addNavaid(fix);
+			navaids.put(id, fix);
 			line = scanner.nextLine();
 		}
 	

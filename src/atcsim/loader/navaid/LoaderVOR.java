@@ -29,6 +29,7 @@ public class LoaderVOR extends A_Loader{
 			ComponentNavaidVOR vdr = new ComponentNavaidVOR(id, coor3D, vhf);
 			
 			overlay.addNavaid(vdr);
+			navaids.put(id, vdr);
 			
 			line = scanner.nextLine();
 		}

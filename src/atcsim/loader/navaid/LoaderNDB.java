@@ -27,6 +27,7 @@ public class LoaderNDB extends A_Loader{
 			ComponentNavaidNDB ndb = new ComponentNavaidNDB(fields[0], coor3D, uhf);
 			
 			overlay.addNavaid(ndb);
+			navaids.put(fields[0], ndb);
 			
 			line = scanner.nextLine();
 		}
