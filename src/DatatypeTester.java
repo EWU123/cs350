@@ -14,5 +14,29 @@ class DatatypeTester {
 		fail("Not yet implemented");
 	}
 	
+	@Test
+	void testAltitudePitch() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	void testAltitudeYaw() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	void testCourse() {
+		fail("Not yet implemented");
+	}
 
+	@Test
+	void testCoordinateWorld() {
+		fail("Not yet implemented");
+		
+	}
+	
+	@Test
+	void testCorrdinateWorld3D() {
+		fail("Not yet implemented");
+	}
 }
