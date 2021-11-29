@@ -20,14 +20,30 @@ class DatatypeTester {
 	@Test
 	void testAltitudePitch() {
 		AttitudePitch p = new AttitudePitch(10);
-		p.add_(new AttitudePitch(0));
+		p = p.add_(new AttitudePitch(0));
 		assertEquals(10, p.getValue_());
 		
+		p = p.add_(new AttitudePitch(90));
+		assertEquals(100, p.getValue_());
+		
+		p = p.add_(new AttitudePitch(175));
+		assertEquals(-85, p.getValue_());
 	}
 	
 	@Test
 	void testAltitudeYaw() {
-		fail("Not yet implemented");
+		AttitudeYaw y = new AttitudeYaw(10);
+		y = y.add_(new AttitudeYaw(0));
+		assertEquals(10, y.getValue_());
+		
+		y = y.add_(new AttitudeYaw(355));
+		assertEquals(5, y.getValue_());
+		
+		y = y.subtract_(new AttitudeYaw(0));
+		assertEquals(5, y.getValue_());
+		
+		y = y.subtract_(new AttitudeYaw(355));
+		assertEquals(10, y.getValue_());
 	}
 	
 	@Test
