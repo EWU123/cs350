@@ -48,7 +48,18 @@ class DatatypeTester {
 	
 	@Test
 	void testCourse() {
-		fail("Not yet implemented");
+		Course c = new Course(10);
+		c = c.add_(new Course(0));
+		assertEquals(10,c.getValue_());
+		
+		c = c.add_(new Course(355));
+		assertEquals(5,c.getValue_());
+		
+		c = c.subtract_(new Course(0));
+		assertEquals(5,c.getValue_());
+		
+		c = c.subtract_(new Course(355));
+		assertEquals(10,c.getValue_());
 	}
 
 	@Test
