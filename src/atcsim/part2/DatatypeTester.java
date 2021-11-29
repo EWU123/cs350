@@ -61,6 +61,8 @@ class DatatypeTester {
 		c = c.subtract_(new Course(355));
 		assertEquals(10,c.getValue_());
 	}
+	
+	// Course is the campus degrees while attitude yaw is the direction in degrees in relation to the current attitude.
 
 	@Test
 	void testCoordinateWorld() {
