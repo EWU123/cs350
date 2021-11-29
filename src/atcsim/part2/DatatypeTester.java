@@ -2,6 +2,8 @@ package atcsim.part2;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
+import atcsim.datatype.*;
+
 
 class DatatypeTester {
 
@@ -17,7 +19,10 @@ class DatatypeTester {
 	
 	@Test
 	void testAltitudePitch() {
-		fail("Not yet implemented");
+		AttitudePitch p = new AttitudePitch(10);
+		p.add_(new AttitudePitch(0));
+		assertEquals(10, p.getValue_());
+		
 	}
 	
 	@Test
