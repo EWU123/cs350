@@ -9,12 +9,36 @@ class DatatypeTester {
 
 	@Test
 	void testAltitude() {
-		fail("Not yet implemented");
+		Altitude a1 = new Altitude(1000);
+		Altitude a2 = new Altitude(200);
+		assertEquals(1200, a1.add_(a2).getValue_());
+		
+		assertEquals(1200, a2.add_(a1).getValue_());
+		
+		assertEquals(800, a1.subtract_(a2).getValue_());
+		
+		assertEquals(800, a1.subtract_(a2).getValue_());
+		assertEquals(0, a1.compareTo(a1));
+		assertEquals(1, a1.compareTo(a2));
+		assertEquals(-1, a2.compareTo(a1));
+		
+		
 	}
 	
 	@Test
 	void testAngleNavigational() {
-		fail("Not yet implemented");
+		AngleNavigational a1 = new AngleNavigational(90);
+		AngleNavigational a2 = new AngleNavigational(180);
+		assertEquals(270, a1.reciprocate().getValue_());
+		assertEquals(0, a2.reciprocate().getValue_());
+		assertEquals(135, a1.interpolate(a2, new Scaler(0.5)).getValue_());
+		assertEquals(315,a2.interpolate(a1, new Scaler(0.5)).getValue_());
+		
+		
+		
+		
+		
+		
 	}
 	
 	@Test
@@ -66,12 +90,12 @@ class DatatypeTester {
 
 	@Test
 	void testCoordinateWorld() {
-		fail("Not yet implemented");
+		
 		
 	}
 	
 	@Test
 	void testCorrdinateWorld3D() {
-		fail("Not yet implemented");
+		
 	}
 }
