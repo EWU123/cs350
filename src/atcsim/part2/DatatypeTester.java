@@ -9,12 +9,36 @@ class DatatypeTester {
 
 	@Test
 	void testAltitude() {
-		fail("Not yet implemented");
+		Altitude a1 = new Altitude(1000);
+		Altitude a2 = new Altitude(200);
+		assertEquals(1200, a1.add_(a2).getValue_());
+		
+		assertEquals(1200, a2.add_(a1).getValue_());
+		
+		assertEquals(800, a1.subtract_(a2).getValue_());
+		
+		assertEquals(800, a1.subtract_(a2).getValue_());
+		assertEquals(0, a1.compareTo(a1));
+		assertEquals(1, a1.compareTo(a2));
+		assertEquals(-1, a2.compareTo(a1));
+		
+		
 	}
 	
 	@Test
 	void testAngleNavigational() {
-		fail("Not yet implemented");
+		AngleNavigational a1 = new AngleNavigational(90);
+		AngleNavigational a2 = new AngleNavigational(180);
+		assertEquals(270, a1.reciprocate().getValue_());
+		assertEquals(0, a2.reciprocate().getValue_());
+		assertEquals(135, a1.interpolate(a2, new Scaler(0.5)).getValue_());
+		assertEquals(315,a2.interpolate(a1, new Scaler(0.5)).getValue_());
+		
+		
+		
+		
+		
+		
 	}
 	
 	@Test
@@ -65,8 +89,7 @@ class DatatypeTester {
 	// Course is the campus degrees while attitude yaw is the direction in degrees in relation to the current attitude.
 
 	@Test
-	void testCoordinateWorld() {
-		
+	void testCoordinateWorld() {		
 		CoordinateWorld p1 = CoordinateWorld.KSFF;
 		CoordinateWorld p2 = new CoordinateWorld(new Latitude(1, 2, 3), new Longitude(3 ,2 ,1 ));
 		
@@ -151,7 +174,6 @@ class DatatypeTester {
 		//testing that p to KSFF_W with angle and radius is correct
 		test = new CoordinateWorld3D(CoordinateWorld.KSFF_W, zero);
 		assertEquals(270, p.calculateBearing3D(test).getAngle().getValue_(), .0001);
-		assertEquals(794.0382, p.calculateBearing3D(test).getRadiusNauticalMiles().getValue_(), .0001);
-		
+		assertEquals(794.0382, p.calculateBearing3D(test).getRadiusNauticalMiles().getValue_(), .0001);		
 	}
 }
